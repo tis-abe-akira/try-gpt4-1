@@ -18,7 +18,7 @@
     <select id="findById" resultMap="ProjectResultMap">
         SELECT * FROM project WHERE id = #{id}
     </select>
-    <insert id="insert">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO project (customer_id, department_name, manager_name, leader_name, rank, start_date, end_date, category)
         VALUES (#{customerId}, #{departmentName}, #{managerName}, #{leaderName}, #{rank}, #{startDate}, #{endDate}, #{category})
     </insert>

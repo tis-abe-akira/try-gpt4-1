@@ -26,9 +26,9 @@ public class CustomerController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> create(@Validated @RequestBody CustomerDto dto) {
-        customerService.create(dto);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Customer> create(@Validated @RequestBody CustomerDto dto) {
+        Customer created = customerService.create(dto);
+        return ResponseEntity.ok(created);
     }
 
     @PutMapping("/{id}")

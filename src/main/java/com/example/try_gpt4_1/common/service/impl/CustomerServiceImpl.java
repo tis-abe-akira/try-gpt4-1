@@ -24,12 +24,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void create(CustomerDto dto) {
+    public Customer create(CustomerDto dto) {
         Customer customer = new Customer();
         customer.setName(dto.getName());
         customer.setContact(dto.getContact());
         customer.setIndustry(dto.getIndustry());
         customerRepository.insert(customer);
+        // useGeneratedKeysでcustomer.idに自動採番IDがセットされるギャル！
+        return customer;
     }
 
     @Override

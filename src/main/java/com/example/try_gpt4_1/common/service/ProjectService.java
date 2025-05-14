@@ -9,7 +9,7 @@ public interface ProjectService {
 
     Project getById(Long id);
 
-    void create(ProjectDto dto);
+    Project create(ProjectDto dto);
 
     void update(Long id, ProjectDto dto);
 

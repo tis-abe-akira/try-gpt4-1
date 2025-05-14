@@ -26,9 +26,9 @@ public class ProjectController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> create(@Validated @RequestBody ProjectDto dto) {
-        projectService.create(dto);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Project> create(@Validated @RequestBody ProjectDto dto) {
+        Project created = projectService.create(dto);
+        return ResponseEntity.ok(created);
     }
 
     @PutMapping("/{id}")

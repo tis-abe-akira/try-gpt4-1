@@ -13,7 +13,7 @@
     <select id="findById" resultMap="CustomerResultMap">
         SELECT * FROM customer WHERE id = #{id}
     </select>
-    <insert id="insert">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO customer (name, contact, industry) VALUES (#{name}, #{contact}, #{industry})
     </insert>
     <update id="update">

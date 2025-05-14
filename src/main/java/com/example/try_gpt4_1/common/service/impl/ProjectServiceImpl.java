@@ -24,9 +24,11 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public void create(ProjectDto dto) {
+    public Project create(ProjectDto dto) {
         Project project = convertAndValidate(dto);
         projectRepository.insert(project);
+        // useGeneratedKeysでproject.idに自動採番IDがセットされるギャル！
+        return project;
     }
 
     @Override
