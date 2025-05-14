@@ -41,5 +41,11 @@ public class GlobalExceptionHandler {
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("リクエストの値が不正だよ！");
     }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException ex) {
+        // Service層の手動バリデーション用: 複数エラーもまとめて返すギャル！
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
     // 必要に応じて他の例外もここでハンドリングできるよ！
 }

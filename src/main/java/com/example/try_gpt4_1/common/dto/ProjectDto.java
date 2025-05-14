@@ -17,11 +17,11 @@ public class ProjectDto {
     @NotBlank
     private String leaderName;
     @NotNull
-    private Rank rank; // S, A, B, C, D
+    private String rank; // S, A, B, C, D
     @NotNull
     private LocalDate startDate;
     @NotNull
     private LocalDate endDate;
     @NotNull
-    private Category category; // 新規開発・保守開発・パッケージ導入
+    private String category; // 新規開発・保守開発・パッケージ導入
 }
