@@ -4,6 +4,8 @@ import com.example.try_gpt4_1.common.dto.ProjectDto;
 import com.example.try_gpt4_1.common.entity.Project;
 import com.example.try_gpt4_1.common.repository.ProjectRepository;
 import com.example.try_gpt4_1.common.service.ProjectService;
+import com.example.try_gpt4_1.common.dto.Rank;
+import com.example.try_gpt4_1.common.dto.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
